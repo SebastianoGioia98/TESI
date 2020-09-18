@@ -25,12 +25,22 @@ class HomePage extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Icon(Icons.room_service),
+              Center(
+                  child:Text('Notifications')),
               Icon(Icons.room_service),
               Icon(Icons.room_service),
               Icon(Icons.room_service)
             ],
           ),
+           floatingActionButton: Theme(
+            data: Theme.of(context).copyWith(
+                  colorScheme:Theme.of(context).colorScheme.copyWith(secondary: Colors.lightBlue),
+                 ),
+                child: FloatingActionButton(
+                  onPressed: null,
+                    child: Icon(Icons.add),
+                ),
+           ),
         ),
       ),
     );
