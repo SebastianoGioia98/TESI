@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import './Home.dart';
-import './Landscape.dart';
+import './Login.dart';
 import './Work.dart';
+
 void main() => runApp(new MyApp());
+
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return MyAppState();
   }
 }
+
 class MyAppState extends State<MyApp> {
   int _selectedTab = 0;
   final _pageOptions = [
     HomePage(),
     WorkPage(),
-    LandscapePage(),
+    LoginPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -53,4 +56,5 @@ class MyAppState extends State<MyApp> {
         ),
       ),
     );
-  }}
+  }
+}
