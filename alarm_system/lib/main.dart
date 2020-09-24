@@ -16,8 +16,8 @@ class MyAppState extends State<MyApp> {
   int _selectedTab = 0;
   final _pageOptions = [
     HomePage(),
-    WorkPage(),
     LoginPage(),
+    WorkPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -45,12 +45,12 @@ class MyAppState extends State<MyApp> {
               title: Text('Home'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.account_box),
-              title: Text('Account'),
+              icon: Icon(Icons.settings),
+                title: Text('Settings'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
+              icon: Icon(Icons.account_box),
+              title: Text('Account'),
             ),
           ],
         ),

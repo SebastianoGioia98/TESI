@@ -25,12 +25,11 @@ class HomePage extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Center(
-                  child:Text('Notifications')),
-              Icon(Icons.room_service),
-              Icon(Icons.room_service),
-              Icon(Icons.room_service)
-            ],
+              Mybottom(),
+              Mybottom(),
+              Mybottom(),
+              Mybottom(),
+          ],
           ),
            floatingActionButton: Theme(
             data: Theme.of(context).copyWith(
@@ -42,6 +41,41 @@ class HomePage extends StatelessWidget {
                 ),
            ),
         ),
+      ),
+    );
+  }
+}
+class Mybottom extends StatelessWidget {
+  Mybottom({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: RaisedButton(
+        child: const Text('Notifications'),
+        onPressed: () {
+          Scaffold.of(context).showBottomSheet<void>(
+                (BuildContext context) {
+              return Container(
+                height: 200,
+                color: Colors.blueAccent,
+                child:Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const Text('Notifications history'),
+                      RaisedButton(
+                        child: const Text('Close notifications window'),
+                        onPressed: () => Navigator.pop(context),
+                      )
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        },
       ),
     );
   }
