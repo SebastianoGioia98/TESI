@@ -34,7 +34,7 @@ class HomeScreenState extends State<HomeScreen> {
           )),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Allarm System'),
+          title: Text('Alarm System'),
         ),
         body: _pageOptions[_selectedTab],
         bottomNavigationBar: BottomNavigationBar(
